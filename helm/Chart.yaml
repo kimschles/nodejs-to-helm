@@ -1,0 +1,9 @@
+apiVersion: v1
+description: A sample Node.js app to practice converting to a Helm chart
+name: nodejs-to-helm
+version: 1.0.0
+appVersion: 0.0.1
+sources:
+- https://github.com/kimschles/nodejs-to-helm
+maintainers:
+- name: Kim Schlesinger

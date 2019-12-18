@@ -1,6 +1,6 @@
 // From Dan's Guides:
 // https://github.com/justsml/guides/tree/master/express/setup-guide
-// TODO: INSTALL PRE-REQS:  npm install express cors morgan helmet nodemon
+
 const express = require('express')
 const morgan = require('morgan')
 const helmet = require('helmet')
@@ -16,14 +16,7 @@ app.use(morgan(process.env.NODE_ENV !== 'production'
     : 'combined'))
 app.use(cors({origin: true, credentials: true})) // <= Disable if you don't need CORS
 
-// app.use('/api/cat', require('./routes/cat'))
-app.use('/api/dog', require('./routes/dog'))
-
-// TODO: Optional Static file handler: app.use('/', express.static('./build'))
-
-// TODO: ADD (MOUNT) YOUR MIDDLEWARE (ROUTES) HERE: Example: app.use('/api/cat',
-// require('./routes/cat')) The following 2 `app.use`'s MUST follow ALL your
-// routes/middleware
+app.use('/api/book', require('./routes/book'))
 app.use(notFound)
 app.use(errorHandler)
 
